@@ -3,7 +3,6 @@ import asyncio
 from aiogram import Bot, Dispatcher
 from cfg import TOKEN
 import handlers_menu,handlers_plant,handlers_desiese_bugs_fertillizer,handlers_back_button,handlers_bugs
-#2nd test
 
 
 
