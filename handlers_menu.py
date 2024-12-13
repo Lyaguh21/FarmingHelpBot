@@ -73,3 +73,10 @@ async def process_buy_pass_press(callback: CallbackQuery):
         show_alert=True
 
     )
+@router.callback_query(F.data == "messanger_pressed")
+async def process_buy_pass_press(callback: CallbackQuery):
+    await callback.answer(
+        text="В будущем тут обязательно что-то будет⚙️",
+        show_alert=True
+
+    )

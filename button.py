@@ -63,7 +63,7 @@ buy_pass_button = InlineKeyboardButton(
 )
 social_networks_button = InlineKeyboardButton(
     text="Соц Сети 📱",
-    url="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    callback_data = "messanger_pressed"
 )
 
 menu_keyboard = InlineKeyboardMarkup(
@@ -643,7 +643,7 @@ bugs_banana = InlineKeyboardMarkup(
 ##-------------------------------------------ВРЕДИТЕЛИ-ЯГОД-----------------------------------------------\\\
 bugs_cherry_first = InlineKeyboardButton(
     text= "Бурый клещ 🪲",
-    callback_data = "bugs_cherry_first_pressed",
+    callback_data = "bugs_cherry_first_pressed",        #Временно убрал
 )
 bugs_cherry_second = InlineKeyboardButton(
     text= "Пилильщик Косточковый 🪲",
@@ -654,11 +654,11 @@ bugs_cherry_third = InlineKeyboardButton(
     callback_data = "bugs_cherry_third_pressed",
 )
 bugs_cherry = InlineKeyboardMarkup(
-    inline_keyboard=[[bugs_cherry_first],[bugs_cherry_second],[bugs_cherry_third]]
+    inline_keyboard=[[bugs_cherry_second],[bugs_cherry_third]]
 )
 
 bugs_watermelon_first = InlineKeyboardButton(
-    text= "Базачевая Тля 🪲",
+    text= "Бахачевая Тля 🪲",
     callback_data = "bugs_watermelon_first_pressed",
 )
 bugs_watermelon_second = InlineKeyboardButton(
@@ -682,7 +682,7 @@ bugs_strawberry_second = InlineKeyboardButton(
     callback_data = "bugs_strawberry_second_pressed",
 )
 bugs_strawberry_third = InlineKeyboardButton(
-    text= "Земляничный клеш 🪲",
+    text= "Земляничный клещ 🪲",
     callback_data = "bugs_strawberry_third_pressed",
 )
 bugs_strawberry = InlineKeyboardMarkup(

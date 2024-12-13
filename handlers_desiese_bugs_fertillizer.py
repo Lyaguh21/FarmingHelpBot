@@ -14,7 +14,7 @@ from LEXICON import *
 id_plant = "NONE"
 id_theme = "NONE"
 id_category = "NONE"
-
+#test2
 router = Router()
 
 #----------------------------------------------------------------------БОЛЕЗНИ-----------------------------------------------------------------------------------
@@ -105,12 +105,12 @@ async def process_disease_press(callback: CallbackQuery):
             InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_menu/desise.png"), caption="Выберите Интересующую болезнь винограда"),
             reply_markup= desiese_grape
         )
-    elif id_plant == "gooseberies_button_pressed":
+    elif id_plant == "gooseberries_button_pressed":
         await callback.message.edit_media(
             InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_menu/desise.png"), caption="Выберите Интересующую болезнь крыжовника"),
             reply_markup= desiese_gooseberries
         )
-    elif id_plant == "blueberry_button_pressed":
+    elif id_plant == "blueberries_button_pressed":
         await callback.message.edit_media(
             InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_menu/desise.png"), caption="Выберите Интересующую болезнь голубики"),
             reply_markup= desiese_blueberry
@@ -358,7 +358,7 @@ async def process_fertilizer_press(callback: CallbackQuery):
             )
         elif id_category == "diseise_grape_third_pressed":
             await callback.message.edit_media(
-                InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_desiese_plant/mildu_grape.jpg"), caption = mildu_desiese_grape1 + mildu_desiese_grape2),
+                InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_desiese_plant/mildu_grape.jpg"), caption = mildu_desiese_grape),
                 reply_markup=back_to_beginning_keyboard
             )
     elif id_plant == "gooseberries_button_pressed":
@@ -377,7 +377,7 @@ async def process_fertilizer_press(callback: CallbackQuery):
                 InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_desiese_plant/septorioz_gooseberries.jpg"), caption=septorioz_desiese_gooseberries),
                 reply_markup=back_to_beginning_keyboard
             )
-    elif id_plant == "blueberry_button_pressed":
+    elif id_plant == "blueberries_button_pressed":
         if id_category == "diseise_blueberry_first_pressed":
             await callback.message.edit_media(
                 InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_desiese_plant/rak_blueberry.jpg"), caption=rak_steblya_desiese_blueberry),
@@ -465,9 +465,8 @@ async def process_disease_press(callback: CallbackQuery):
 
     elif id_plant == "cherry_button_pressed":
         await callback.message.edit_media(
-            InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_menu/bugs.png"),
-                            caption="Выберите Интересующих вредителей вишни"),
-            reply_markup=bugs_cherry
+            InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_menu/bugs.png"), caption="Выберите Интересующих вредителей вишни"),
+            reply_markup = bugs_cherry
         )
     elif id_plant == "watermelon_button_pressed":
         await callback.message.edit_media(
@@ -499,7 +498,7 @@ async def process_disease_press(callback: CallbackQuery):
                             caption="Выберите Интересующих вредителей крыжовника"),
             reply_markup=bugs_gooseberries
         )
-    elif id_plant == "blueberry_button_pressed":
+    elif id_plant == "blueberries_button_pressed":
         await callback.message.edit_media(
             InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_menu/bugs.png"),
                             caption="Выберите Интересующих вредителей голубики"),
@@ -722,7 +721,7 @@ async def process_fertilizer_press(callback: CallbackQuery):
     elif id_plant == "raspberry_button_pressed":
         if id_category == "bugs_raspberry_first_pressed":
             await callback.message.edit_media(
-                InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_bugs_plant/galica_raspberry.jpg_raspberry.jpg"), caption=galica_bugs_raspberry),
+                InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_bugs_plant/galica_raspberry.jpg"), caption=galica_bugs_raspberry),
                 reply_markup=back_to_beginning_keyboard
             )
         elif id_category == "bugs_raspberry_second_pressed":
@@ -767,7 +766,7 @@ async def process_fertilizer_press(callback: CallbackQuery):
                 InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_bugs_plant/ognevka_gooseberries.jpg"), caption=ognevka_bugs_gooseberries),
                 reply_markup=back_to_beginning_keyboard
             )
-    elif id_plant == "blueberry_button_pressed":
+    elif id_plant == "blueberries_button_pressed":
         if id_category == "bugs_blueberry_first_pressed":
             await callback.message.edit_media(
                 InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_bugs_plant/klesh_blueberry.jpg"), caption=pautinniy_klesh_bugs_blueberry),
@@ -883,7 +882,7 @@ async def process_disease_press(callback: CallbackQuery):
             InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_menu/fertilizer.png"), caption="Выберите Интересующие удобрения крыжовника"),
             reply_markup= fertilizer_gooseberries
         )
-    elif id_plant == "blueberry_button_pressed":
+    elif id_plant == "blueberries_button_pressed":
         await callback.message.edit_media(
             InputMediaPhoto(media=FSInputFile("../FHB_TEST/photo_menu/fertilizer.png"), caption="Выберите Интересующие удобрения голубики"),
             reply_markup= fertilizer_blueberry
@@ -902,7 +901,7 @@ async def process_disease_press(callback: CallbackQuery):
 
 
 
-# Появление ответов на Вредителей
+# Появление ответов на Удобрения
 @router.callback_query(F.data.in_ (fertilizer_plant))
 async def process_fertilizer_press(callback: CallbackQuery):
     global id_category
